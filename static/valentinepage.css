@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.pink-bg {
+    background: #ff3f6c;
+}
+
+.center-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.valentine-card {
+    background: white;
+    padding: 40px;
+    border-radius: 16px;
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.valentine-card h2 {
+    margin-bottom: 30px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    position: relative;
+}
+
+button {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.yes-btn {
+    background: #ff3f6c;
+    color: white;
+}
+
+.no-btn {
+    background: #ddd;
+    position: relative;
+}

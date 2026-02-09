@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Valentine?</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/valentinepage.css">
+</head>
+<body class="pink-bg">
+
+<div class="center-page">
+    <div class="valentine-card">
+        <h2 id="question"></h2>
+
+        <div class="buttons">
+            <button class="yes-btn" onclick="goYes()">YES 💖</button>
+            <button class="no-btn" id="noBtn">NO 😅</button>
+        </div>
+    </div>
+</div>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const name = params.get("name") || "You";
+
+document.getElementById("question").innerText =
+    `Will you be my Valentine, ${name}? 💘`;
+
+const noBtn = document.getElementById("noBtn");
+
+noBtn.addEventListener("mouseover", () => {
+    const x = Math.random() * 200 - 100;
+    const y = Math.random() * 200 - 100;
+    noBtn.style.transform = `translate(${x}px, ${y}px)`;
+});
+
+function goYes() {
+    window.location.href = "/thankyou";
+}
+</script>
+
+</body>
+</html>
